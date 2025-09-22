@@ -6,7 +6,7 @@ export default function FormationGestionStress() {
   return (
     <main style={styles.main}>
       <header style={styles.header}>
-  <h1 style={styles.title}>Gestion du Stress et des Émotions au Travail</h1>
+  <h1 style={styles.title}>Gestion du Stress et des Émotions <br></br>au Travail</h1>
   <p className="text-white" style={styles.subtitle}>
     Une formation pratique pour apprendre à mieux gérer votre stress, vos émotions, 
     et leur impact sur votre vie professionnelle.
