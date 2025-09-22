@@ -78,9 +78,8 @@ const styles = {
     marginBottom: '0.5rem',
   },
   subtitle: {
-    fontSize: '1.2rem',
-    color: '#555',
-  },
+  fontSize: '1.2rem',
+},
   details: {
     marginBottom: '2rem',
     borderTop: '1px solid #ddd',
