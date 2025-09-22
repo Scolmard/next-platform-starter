@@ -51,12 +51,13 @@ export default function FormationGestionStress() {
         <p>Experts en psychologie du travail, coachs certifiés.</p>
       </section>
 
-      <section style={styles.inscription}>
-        <h2>Inscription & Informations pratiques</h2>
-        <p>Coût de la formation : 1 200 € TTC</p>
-        <p>Dates : à définir selon planning</p>
-        <p>Lieu : Formation en présentiel / en ligne possible</p>
-      </section>
+      <section className="text-black" style={styles.inscription}>
+  <h2>Inscription & Informations pratiques</h2>
+  <p>Coût de la formation : 1 200 € TTC</p>
+  <p>Dates : à définir selon planning</p>
+  <p>Lieu : Formation en présentiel / en ligne possible</p>
+</section>
+
     </main>
   )
 }
