@@ -1,67 +1,103 @@
-import Link from 'next/link';
-import { Card } from 'components/card';
-import { ContextAlert } from 'components/context-alert';
-import { Markdown } from 'components/markdown';
-import { RandomQuote } from 'components/random-quote';
-import { getNetlifyContext } from 'utils';
+// app/page.jsx (ou un autre fichier selon ta structure)
 
-const contextExplainer = `
-The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
-([docs](https://docs.netlify.com/configure-builds/environment-variables/#build-metadata)):
-`;
+import Image from 'next/image'
 
-const preDynamicContentExplainer = `
-The card content below is fetched by the client-side from \`/quotes/random\` (see file \`app/quotes/random/route.js\`) with a different quote shown on each page load:
-`;
+export default function FormationGestionStress() {
+  return (
+    <main style={styles.main}>
+      <header style={styles.header}>
+        <h1 style={styles.title}>Gestion du Stress et des Émotions au Travail</h1>
+        <p style={styles.subtitle}>
+          Une formation pratique pour apprendre à mieux gérer votre stress, vos émotions, et leur impact sur votre vie professionnelle.
+        </p>
+      </header>
 
-const postDynamicContentExplainer = `
-On Netlify, Next.js Route Handlers are automatically deployed as [Serverless Functions](https://docs.netlify.com/functions/overview/).
-Alternatively, you can add Serverless Functions to any site regardless of framework, with acccess to the [full context data](https://docs.netlify.com/functions/api/).
-
-And as always with dynamic content, beware of layout shifts & flicker! (here, we aren't...)
-`;
-
-const ctx = getNetlifyContext();
-
-export default function Page() {
-    return (
-        <div className="flex flex-col gap-12 sm:gap-16">
-            <section>
-                <ContextAlert className="mb-6" />
-                <h1 className="mb-4">Netlify Platform Starter - Next.js</h1>
-                <p className="mb-6 text-lg">Get started with Next.js and Netlify in seconds.</p>
-                <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
-                    Read the Docs
-                </Link>
-            </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-                <Markdown content={postDynamicContentExplainer} />
-            </section>
+      <section style={styles.details}>
+        <div style={styles.detailItem}>
+          <strong>Durée :</strong> 2 jours (14 heures)
         </div>
-    );
+        <div style={styles.detailItem}>
+          <strong>Public concerné :</strong> Tous les salariés, managers, dirigeants
+        </div>
+        <div style={styles.detailItem}>
+          <strong>Prérequis :</strong> Aucun
+        </div>
+        <div style={styles.detailItem}>
+          <strong>Objectifs clés :</strong>
+          <ul>
+            <li>Comprendre les mécanismes du stress</li>
+            <li>Identifier ses émotions et leur impact</li>
+            <li>Mettre en place des techniques de relaxation et de gestion émotionnelle</li>
+            <li>Améliorer la communication en situation de tension</li>
+          </ul>
+        </div>
+      </section>
+
+      <section style={styles.programme}>
+        <h2>Programme</h2>
+        <ol>
+          <li>Introduction : définitions et concepts</li>
+          <li>Les causes et symptômes du stress professionnel</li>
+          <li>Reconnaissance et expression des émotions</li>
+          <li>Techniques de gestion : respiration, pleine conscience, structuration du temps</li>
+          <li>Communication assertive et gestion des conflits</li>
+          <li>Mise en situation / exercices pratiques</li>
+        </ol>
+      </section>
+
+      <section style={styles.intervenants}>
+        <h2>Intervenants</h2>
+        <p>Experts en psychologie du travail, coachs certifiés.</p>
+      </section>
+
+      <section style={styles.inscription}>
+        <h2>Inscription & Informations pratiques</h2>
+        <p>Coût de la formation : 1 200 € TTC</p>
+        <p>Dates : à définir selon planning</p>
+        <p>Lieu : Formation en présentiel / en ligne possible</p>
+      </section>
+    </main>
+  )
 }
 
-function RuntimeContextCard() {
-    const title = `Netlify Context: running in ${ctx} mode.`;
-    if (ctx === 'dev') {
-        return (
-            <Card title={title}>
-                <p>Next.js will rebuild any page you navigate to, including static pages.</p>
-            </Card>
-        );
-    } else {
-        return (
-            <Card title={title}>
-                <p>This page was statically-generated at build time.</p>
-            </Card>
-        );
-    }
+const styles = {
+  main: {
+    padding: '2rem',
+    fontFamily: 'Arial, sans-serif',
+    maxWidth: '800px',
+    margin: '0 auto',
+    lineHeight: '1.6',
+  },
+  header: {
+    marginBottom: '2rem',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: '2.5rem',
+    marginBottom: '0.5rem',
+  },
+  subtitle: {
+    fontSize: '1.2rem',
+    color: '#555',
+  },
+  details: {
+    marginBottom: '2rem',
+    borderTop: '1px solid #ddd',
+    paddingTop: '1rem',
+  },
+  detailItem: {
+    marginBottom: '0.75rem',
+  },
+  programme: {
+    marginBottom: '2rem',
+  },
+  intervenants: {
+    marginBottom: '2rem',
+  },
+  inscription: {
+    marginBottom: '2rem',
+    backgroundColor: '#f9f9f9',
+    padding: '1rem',
+    borderRadius: '5px',
+  },
 }
