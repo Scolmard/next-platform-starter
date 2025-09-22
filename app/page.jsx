@@ -24,7 +24,7 @@ export default function FormationGestionStress() {
           <strong>Prérequis :</strong> Aucun
         </div>
         <div style={styles.detailItem}>
-          <strong>Objectifs clés :</strong>
+          <h2>Objectifs clés :</h2>
           <ul>
             <li>Comprendre les mécanismes du stress</li>
             <li>Identifier ses émotions et leur impact</li>
