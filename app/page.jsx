@@ -17,12 +17,8 @@ export default function FormationGestionStress() {
       <section style={styles.detailsWrapper}>
         <div style={styles.details}>
           <div style={styles.detailItem}>
-            <strong>Durée :</strong> 2 jours (14 heures)
-          </div>
-          <div style={styles.detailItem}>
-            <strong>Public concerné :</strong> Tous les salariés, managers, dirigeants
-          </div>
-          <div style={styles.detailItem}>
+            <strong>Durée :</strong> 2 jours (14 heures)<br />
+            <strong>Public concerné :</strong> Tous les salariés, managers, dirigeants<br />
             <strong>Prérequis :</strong> Aucun
           </div>
           <div style={styles.detailItem}>
