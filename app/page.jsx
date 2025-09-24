@@ -23,11 +23,11 @@ export default function FormationGestionStress() {
           </div>
           <div style={styles.detailItem}>
             <h2>Objectifs clés :</h2>
-            <ul>
-              <li>Comprendre les mécanismes du stress</li>
-              <li>Identifier ses émotions et leur impact</li>
-              <li>Mettre en place des techniques de relaxation et de gestion émotionnelle</li>
-              <li>Améliorer la communication en situation de tension</li>
+            <ul className="list-disc pl-6" style={styles.ul}>
+              <li style={styles.li}>Comprendre les mécanismes du stress</li>
+              <li style={styles.li}>Identifier ses émotions et leur impact</li>
+              <li style={styles.li}>Mettre en place des techniques de relaxation et de gestion émotionnelle</li>
+              <li style={styles.li}>Améliorer la communication en situation de tension</li>
             </ul>
           </div>
         </div>
@@ -45,14 +45,14 @@ export default function FormationGestionStress() {
 
       <section style={styles.programme}>
         <h2>Programme</h2>
-        <ol>
-          <li>Introduction : définitions et concepts</li>
-          <li>Les causes et symptômes du stress professionnel</li>
-          <li>Reconnaissance et expression des émotions</li>
-          <li>Techniques de gestion : respiration, pleine conscience, structuration du temps</li>
-          <li>Communication assertive et gestion des conflits</li>
-          <li>Mise en situation / exercices pratiques</li>
-        </ol>
+        <ul className="list-disc pl-6" style={styles.ul}>
+          <li style={styles.li}>Introduction : définitions et concepts</li>
+          <li style={styles.li}>Les causes et symptômes du stress professionnel</li>
+          <li style={styles.li}>Reconnaissance et expression des émotions</li>
+          <li style={styles.li}>Techniques de gestion : respiration, pleine conscience, structuration du temps</li>
+          <li style={styles.li}>Communication assertive et gestion des conflits</li>
+          <li style={styles.li}>Mise en situation / exercices pratiques</li>
+        </ul>
       </section>
 
       <section style={styles.intervenants}>
@@ -62,9 +62,11 @@ export default function FormationGestionStress() {
 
       <section className="text-black" style={styles.inscription}>
         <h2>Inscription & Informations pratiques</h2>
-        <p>Coût de la formation : 1 200 € TTC</p>
-        <p>Dates : à définir selon planning</p>
-        <p>Lieu : Formation en présentiel / en ligne possible</p>
+        <ul className="list-disc pl-6" style={styles.ul}>
+          <li style={styles.li}>Coût de la formation : 1 200 € TTC</li>
+          <li style={styles.li}>Dates : à définir selon planning</li>
+          <li style={styles.li}>Lieu : Formation en présentiel / en ligne possible</li>
+        </ul>
       </section>
     </main>
   )
@@ -117,5 +119,14 @@ const styles = {
     backgroundColor: '#f9f9f9',
     padding: '1rem',
     borderRadius: '5px',
+  },
+  ul: {
+    listStyleType: 'disc',
+    paddingLeft: '1.5rem',
+    marginTop: '0.5rem',
+  },
+  li: {
+    display: 'list-item',
+    marginBottom: '0.25rem',
   },
 }
