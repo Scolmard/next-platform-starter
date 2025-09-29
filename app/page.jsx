@@ -9,18 +9,21 @@ export default function FormationGestionStress() {
         <h1 style={styles.title}>Gestion du Stress et des Émotions <br />au Travail</h1>
         <p className="text-white" style={styles.subtitle}>
           Une formation pratique pour apprendre à mieux gérer votre stress, vos émotions, <br />
-          et leur impact sur votre vie professionnelle.
+          et leur impact sur votre vie professionnelle. Développer son intelligence émotionnelle
         </p>
       </header>
 
       {/* Bloc avec texte + image côte à côte */}
       <section style={styles.detailsWrapper}>
+        
         <div style={styles.details}>
+          
           <div style={styles.detailItem}>
-            <strong>Durée :</strong> 2 jours (14 heures)<br />
+            <strong>Durée :</strong> 2 jours (14 heures) en petit groupe<br />
             <strong>Public concerné :</strong> Tous les salariés, managers, dirigeants<br />
-            <strong>Prérequis :</strong> Aucun
+            <strong>Prérequis :</strong> Aucun <br/><br/>
           </div>
+          
           <div style={styles.detailItem}>
             <h2>Objectifs clés :</h2>
             <ul className="list-disc pl-6" style={styles.ul}>
@@ -30,6 +33,7 @@ export default function FormationGestionStress() {
               <li style={styles.li}>Améliorer la communication en situation de tension</li>
             </ul>
           </div>
+          
         </div>
 
         <div style={styles.imageContainer}>
@@ -63,7 +67,7 @@ export default function FormationGestionStress() {
       <section className="text-black" style={styles.inscription}>
         <h2>Inscription & Informations pratiques</h2>
         <ul className="list-disc pl-6" style={styles.ul}>
-          <li style={styles.li}>Coût de la formation : 1 200 € TTC</li>
+          <li style={styles.li}>Coût de la formation : 850 € TTC</li>
           <li style={styles.li}>Dates : à définir selon planning</li>
           <li style={styles.li}>Lieu : Formation en présentiel / en ligne possible</li>
         </ul>
