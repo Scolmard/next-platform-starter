@@ -55,7 +55,7 @@ export default function FormationGestionStress() {
           <li style={styles.li}>Reconnaissance et expression des émotions</li>
           <li style={styles.li}>Techniques de gestion : respiration, pleine conscience, structuration du temps</li>
           <li style={styles.li}>Communication assertive et gestion des conflits</li>
-          <li style={styles.li}>Mise en situation / exercices pratiques</li><br/>
+          <li style={styles.li}>Mise en situation / exercices pratiques</li>
         </ul>
       </section>
 
